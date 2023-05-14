@@ -177,5 +177,3 @@ outputs:
     - HTML
     - RSS
     - JSON # is necessary
-
-disqusShortname: sungmincho131
