@@ -127,13 +127,13 @@ MI 라는 string 에서 시작해서 주어진 string rewrite 규칙들만 가�
 
 그리고 아니나 다를까, 최근 논문 [Transformers Learn Shortcuts to Automata](https://arxiv.org/pdf/2210.10749.pdf) 은 shallow 한 Transformer 가 임의의 finite state automata 를 배워낼 수 있다는 점을 보입니다. 특히 recurrent 한 state transition 에 대한 shortcut 이 언제나 존재해서 길이 T 인 transition 에 대해서 깊이 $O(log(T))$ 인 Transformer 로도 충분하다는 점을 보입니다 (특정 조건에서는 $O(1)$ 도 가능).
 
-이 논문의 내포에 대해서 짚고 넘어갈 필요가 있습니다. 앞선 reading list 에서 소개 된 [A Mechanistic Interpretability Analysis of Grokking](https://www.alignmentforum.org/posts/N6WM6hs7RQMKDhYjB/a-mechanistic-interpretability-analysis-of-grokking) 의 modular addition 같은 경우도 finite state automata 의 한 사례에 해당됩니다. 그러나 이 논문이 모든 finite state automata 에 대해서 그것을 학습한 Transformer 내부에 생길 circuit 들을 예견하는지, 즉 증명이 **구성적**[^constructive_math]인지는 제가 아직 충분히 살펴보지 못했습니다.
+이 논문의 내포에 대해서 짚고 넘어갈 필요가 있습니다. 앞선 reading list 에서 소개 된 [A Mechanistic Interpretability Analysis of Grokking](https://www.alignmentforum.org/posts/N6WM6hs7RQMKDhYjB/a-mechanistic-interpretability-analysis-of-grokking) 의 modular addition ((x+y)%113) 같은 경우도 finite state automata 의 한 사례에 해당됩니다. 그러나 이 논문이 모든 finite state automata 에 대해서 그것을 학습한 Transformer 내부에 생길 circuit 들을 예견하는지, 즉 증명이 **구성적**[^constructive_math]인지는 제가 아직 충분히 살펴보지 못했습니다.
 
-Transformer 가 가지는 계산-기계적 역능을 가늠해보려 한 것은 이 논문이 처음이 아닙니다. [Thinking Like Transformers](http://proceedings.mlr.press/v139/weiss21a/weiss21a.pdf) 는 RASP 라는 Sequence 처리 언어를 고안한 후에, RASP 로 짤 수 있는 프로그램들이라면 (이론적으로) Transformer 가 배워낼 수 있음을 보입니다. DeepMind 의 [Tracr: Compiled Transformers as a Laboratory for Interpretability](https://arxiv.org/pdf/2301.05062.pdf) 는 이를 이어받아 RASP 프로그램을 Transformer weights 로 직접 컴파일 하는 파이프라인을 제안합니다. 이렇게 만들어진 Transformer 모델은, 평소와 달리 그 동작 논리를 미리 알고 있기 때문에 Interpretability 연구에 도움이 될 수 있습니다.
+Transformer 가 가지는 계산-기계적 역능을 가늠해보려 한 시도는 이 논문이 처음이 아닙니다. [Thinking Like Transformers](http://proceedings.mlr.press/v139/weiss21a/weiss21a.pdf) 는 RASP 라는 Sequence 처리 언어를 고안한 후에, RASP 로 짤 수 있는 프로그램들이라면 (이론적으로) Transformer 가 배워낼 수 있음을 보입니다. DeepMind 의 [Tracr: Compiled Transformers as a Laboratory for Interpretability](https://arxiv.org/pdf/2301.05062.pdf) 는 이를 이어받아 RASP 프로그램을 Transformer weights 로 직접 컴파일 하는 파이프라인을 제안합니다. 이렇게 만들어진 Transformer 모델은, 평소와 달리 그 동작 논리를 미리 알고 있기 때문에 Interpretability 연구에 도움이 될 수 있습니다.
 
 [Looped Transformers as Programmable Computers](https://arxiv.org/abs/2301.13196) 에서는 13개의 레이어를 가지는 Transformer 를 정교하게 설계하여 Universal Computer 로 만들 수 있음을 보입니다. 튜링-완전과 관련한 좀 더 이전 연구로는 [Attention is Turing Complete](https://www.jmlr.org/papers/volume22/20-302/20-302.pdf), [Universal Transformers](https://arxiv.org/pdf/1807.03819.pdf) 등이 있습니다[^another_computation].
 
-(...)
+etc... etc...
 
 그러나 이 모든 것들이 과연 무엇을 예증하는 것일까요? Transformer 가 충분한 계산적 역능을 가지고 있다는 사실은 날이 갈수록 당연해지고, 그럼에도 거기서 지능이 창발하는 원리는 아직도 묘연한 상황에서, MU(無)-GPT 는 고작 한 편의 시에 불과할 뿐입니다.
 
@@ -144,8 +144,31 @@ Transformer 가 가지는 계산-기계적 역능을 가늠해보려 한 것은 
 > --- From [Sparks of Artificial General Intelligence: Early experiments with GPT-4](https://arxiv.org/abs/2303.12712)
 
 
-p.s. 가능하다면 고민과 공부를 조금 더 해보고 나서 2편을 써보도록 하겠습니다.
+*교차하는 회로들과 고차원 공간의 골짜기들...*
 
+### 4. 약간의 회의와 Personal Unalignment
+
+글을 써야 하는 입장에서 최대한 한쪽 의견을 부각했지만, 실은 대부분의 안건에 대해서 양가적인 감정이 듭니다. 미처 쓰지 못한 생각의 잔여물들을 아래에 풀어 보았는데, 잔여물인만큼 엄청 깊게 생각해본 내용은 아니기에 제가 잘못 생각한 부분이 있다면 댓글 남겨주시면 감사할 것 같습니다.
+
+**Q. AGI 가 올까?**
+
+저는 이 문제에 대해 판단할 깜냥은 되지 못하기에 다른 사람들의 생각에 귀를 기울여 볼 수 밖에 없는데, 듣다 보면 오긴 할 것 같습니다. 위에서 언급한 이름들 외에도 점점 더 많은 인물들이 AGI 가 금방이라도 올 것처럼 얘기하는데 그냥 떠오르는 랜덤한 예시로는 John Carmack 이 있습니다 ([The code for AGI will be simple](https://youtu.be/xLi83prR5fg)). 또, 같은 영상에서 말하듯이, 기계가 의식을 가졌는지의 여부는 점점 덜 중요한 문제가 되어가는 것 같은데, 한때 의식이라는 것을 굉장히 신비롭고 중요하게 바라보았던 저 역시도 요즘엔 그렇게 느낍니다. "지능을 흉내낼 줄 아는 것 자체가 이미 지능이다" 라는 재귀적 정의에 동의하고 (출처를 기억할 수 없음), 또 "Essence 가 아닌 Semblance 가 모든 것이다" 라는 철학적 소견에도 동의하는 바가 있어서, 곧 AGI가 도래한다는 소문을 개인적으로 납득하기가 그다지 어렵지 않게 느껴집니다.
+
+**Q. AI 가 인류에 그렇게 큰 위협이 될까?**
+
+하지만 AI safety 의 중요성을 이야기하는 사람들이 말하듯이, AI 가 일순간에 인류에게 위협적인 존재가 되고 우리가 그것에 대한 통제를 잃는 상황이 일어날 것이라고는 점점 생각되지 않습니다. 일테면 self-aware 해진 AGI 가 재귀발전을 시작하여 인간의 기준에서는 찰나도 안 되는 시간 안에 초지능체가 나타나고 그렇게 되면 이미 모든 것이 돌이킬 수 없게 된다는 식의 시나리오는 ("AI foom") 개인적으로 생각하면 생각할수록 얼치기 공상과학 시나리오에 가깝게 느껴질 뿐입니다 (물론 그들은 지금 상황이 <돈 룩 업> 과 흡사한 이유가 바로 저처럼 생각하는 사람들 때문이라고 말할테지요). 도리어, AI 자체보다는 AI 를 사용하는 소규모의 사람들이 대규모의 사람들에게 지배력을 행사할 수 있게 된다는 식의 이야기는 믿을 수 있습니다.
+
+**Q. AI Alignment 가 의미가 있을까?**
+
+그런 견지에서 AI Alignment 가 과연 얼마나 의미가 있을까 하는 생각도 듭니다. 일단 그들이 말하는 것처럼 초지능체가 나타난다고 할 때, 그것을 Align 하려는 시도가 얼마나 성공적일 수 있을까 저는 잘 모르겠습니다. "우리보다 똑똑한 피조물이라면 무엇을 할 수 있을지 우리가 상상조차 할 수 있겠느냐" 는 식의 폭발하는 논리가 그들의 종말론의 중추를 구성하는 것 같은데, 그렇게 따지면 우리보다 똑똑한데 우리가 통제할 수 있다는 근거는 어디에 있습니까? 또 반대로 초지능체가 나타난다기 보다는 AI를 안 좋게 사용하는 인간들에 의해서 파멸적인 결과가 나오는 시나리오에서는, AI Alignment 의 의미가 더욱 더 퇴색되는 것 같은데, 모델의 내부 회로들을 다 파악하여 좋은 쪽으로 정렬하는 법을 안다는 것은, 동시에 나쁜 쪽으로 정렬하는 법을 알게 되는 것과 동전의 양면처럼 뗄 수 없는 것처럼 느껴지기 때문입니다.
+
+**Q. Mechanistic Interpretability 가 의미가 있을까?**
+
+AGI 든 인류 멸망이든 다 잊어버리고, Mechanistic Interpretability 만 놓고 보았을 때 이것이 나에게 의미가 있는지 생각해 봅니다. 예를 들어 Toy Model 을 연구실 GPU 위에 올려놓고 몇 달을 해부해서 회로 하나를 발견해 냈다고 생각해 봅시다. 아닙니다, 생각해보지 맙시다[^paralysis].
+
+**회로들**
+
+결국 삶이란 일련의 게임들을 플레이하는 것이고, 각각의 게임은 어떤 가치와 관련이 있습니다. 특정한 가치를 진심으로 믿으면서 자신의 삶을 거기에 Align 시키면서 살아가는 사람은 **Enthusiast** 가 됩니다. 어떠한 가치도 진심으로 믿지 않는 사람은 **Nihilist** 가 됩니다. 어떠한 가치도 믿지 않으면서 여전히 문제 없이 게임들을 즐기면서 살아가는 사람은 **Ironist** 가 됩니다[^ironist]. 마법이 사라지는 순간은 회로들이 파악될 때이고, 회로들을 낱낱이 파악하지 못하더라도 마법이 사라지는 기분은 가끔씩 찾아옵니다. 추천 시스템의 회로들, 자본의 회로들, 지능의 회로들, 연애의 회로들, 삶의 회로들이 불현듯 그 원리를 드러낼 때마다 저는 점점 **Ironist** 가 되어가고, 그 한가운데에서 다시금 회로들이 기계로, 여럿이 하나로, 구체가 추상으로 종합되는 신비를 여전히 이해하지 못합니다.
 
 
 [^surplus]: https://blog.uvm.edu/aivakhiv/2020/06/29/we-are-surveillance-capital-stock/
@@ -176,3 +199,5 @@ p.s. 가능하다면 고민과 공부를 조금 더 해보고 나서 2편을 써
 [^decidability]: 사실 더 강력하게는 아예 decidable 한 criterion 을 만들 수 있는데, 자세한 건 [위키피디아](https://en.wikipedia.org/wiki/MU_puzzle) 참고 바랍니다.
 [^constructive_math]: https://ncatlab.org/nlab/show/constructive+mathematics
 [^another_computation]: 또는 전혀 새로운 종류의 계산-기계가 나왔다고 바라봐야 하지 않을까 하는 생각도 문득 듭니다. [Modern language models refute Chomsky’s approach to language](https://lingbuzz.net/lingbuzz/007180/v1.pdf?_s=dlDoviWbTT9izsrL) 
+[^paralysis]: 언제나 생각이 앞서서 행동이 마비되는 문제.
+[^ironist]: 저는 이 삼분법을 누군가에게 빚졌는데, 그 누군가는 저에게 내가 자신이 아는 사람 중 가장 큰 Ironist 라는 말을 해주었고, 저는 이상하게 그 말이 참 반가웠습니다.
