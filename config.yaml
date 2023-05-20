@@ -69,6 +69,7 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
+  math: true
 
   fuseOpts:
     isCaseSensitive: false
