@@ -154,10 +154,10 @@ menu:
       name: Archives
       url: /archives/
       weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags/
+    #   weight: 20
     # - identifier: search
     #   name: Search
     #   url: /search/
