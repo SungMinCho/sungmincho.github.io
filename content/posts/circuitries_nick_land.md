@@ -1,7 +1,7 @@
 ---
 title: "Circuitries - Nick Land"
 date: 2023-06-08T17:29:15+09:00
-draft: true
+draft: false
 ---
 
 *(Nick Land 의 글 Circuitires 를 재미 삼아 번역해보았습니다. 물론 기계의 도움을 받았습니다. 그럼에도 어색한 번역이 많을 수 있습니다. 글의 시작에 있는 시는 배제하였습니다)*
