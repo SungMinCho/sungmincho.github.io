@@ -141,16 +141,13 @@ AI 연구원 스튜어트 러셀도 지능과 목표의 독립성에 대해 보�
 [4] R. McCormick. NVIDIA is working with Audi to get you a self-driving car by 2020. The Verge, 2017. URL https://tinyurl.com/3epbpaz3.  
 [5] Y. Kageyama. CEO: Nissan will be ready with autonomous driving by 2020. Phys.Org, 2015. URL https://phys.org/news/2015-05-ceo-nissan-ready-autonomous.html.  
 [6] S. Eagell. https://tinyurl.com/psxwhhnb, 2020.  
-[7] R. Baldwin. Tesla tells California DMV that FSD is not capable of autonomous driving. Car and  
-Driver, 2021. URL https://tinyurl.com/p8aw9jke.  
-[8] McDermott D., M. M. Waldrop, B. Chandrasekaran, J. McDermott, and R. Schank. The dark ages of  
-AI: A panel discussion at AAAI-84. AI Magazine, 6(3):122–134, 1985.  
+[7] R. Baldwin. Tesla tells California DMV that FSD is not capable of autonomous driving. Car and Driver, 2021. URL https://tinyurl.com/p8aw9jke.  
+[8] McDermott D., M. M. Waldrop, B. Chandrasekaran, J. McDermott, and R. Schank. The dark ages of AI: A panel discussion at AAAI-84. AI Magazine, 6(3):122–134, 1985.  
 [9] New Navy Device Learns by Doing. New York Times, 1958. URL https://tinyurl.com/yjh3eae8.  
 [10] H. A. Simon. The Ford Distinguished Lectures, Volume 3: The New Science of Management Decision. Harper and Brothers, p. 38, 1960.  
 [11] The Shannon Centennial: 1100100 years of bits. https://www.youtube.com/watch?v=pHSRHi17RKM, 1961.  
 [12] M. L. Minsky. Computation: Finite and Infinite Machines. Prentice-Hall, p. 2, 1967.  
-[13] M. L. Minsky and S. A Papert. Perceptrons: An Introduction to Computational Geometry. MIT press,  
-1969.  
+[13] M. L. Minsky and S. A Papert. Perceptrons: An Introduction to Computational Geometry. MIT press, 1969.  
 [14] J. Lighthill. Artificial intelligence: A general survey. In Artificial Intelligence: A Paper Symposium. Science Research Council, 1973.  
 [15] J. Durkin. Expert systems: A view of the field. IEEE Annals of the History of Computing, 11(02): 56–63, 1996.  
 [16] B. R. Gaines. Perspectives on Fifth Generation computing. Oxford Surveys in Information Technology, 1:1–53, 1984.  
@@ -214,10 +211,8 @@ University of Chicago Press, 2017.
 [73] S. Russell. Human Compatible: Artificial Intelligence and the Problem of Control. Penguin, p. 167, 2019.  
 [74] S. Russell. How to stop superhuman A.I. before it stops us. New York Times, 2019. URL https://www.nytimes.com/2019/10/08/opinion/artificial-intelligence.html.  
 [75] M. Turek. Machine common sense. https://www.darpa.mil/program/machine-common-sense.  
-[76] J. McCarthy. Programs with common sense. In Readings In Knowledge Representation. Morgan Kauf-  
-mann, 1986.  
-[77] D. B. Lenat, R. V. Guha, K. Pittman, D. Pratt, and M. Shepherd. CYC: Toward programs with  
-common sense. Communications of the ACM, 33(8):30–49, 1990.  
+[76] J. McCarthy. Programs with common sense. In Readings In Knowledge Representation. Morgan Kauf-mann, 1986.  
+[77] D. B. Lenat, R. V. Guha, K. Pittman, D. Pratt, and M. Shepherd. CYC: Toward programs with common sense. Communications of the ACM, 33(8):30–49, 1990.  
 [78] R. Zellers, Y. Bisk, A. Farhadi, and Y. Choi. From recognition to cognition: Visual commonsense rea- soning. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 6720–6731, 2019.  
 [79] W. Knight. The US military wants to teach AI some basic common sense. Technology Review, 2018. URL https://tinyurl.com/2xuvxefe.  
 [80] E. Davis and G. Marcus. Commonsense reasoning and commonsense knowledge in artificial intelligence. Communications of the ACM, 58(9):92–103, 2015.  
