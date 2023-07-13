@@ -107,7 +107,7 @@
 }
 
 .post-content li p {
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 .post-content dl {
@@ -228,6 +228,7 @@
 
 .post-content iframe {
     max-width: 100%;
+    padding-bottom: 1em;
 }
 
 .post-content img {
@@ -425,4 +426,36 @@ img[src$='#floatright'] {
     margin: 0.7rem;
     /* this margin is totally up to you */
     /* whatever else styles you fancy here */
+}
+
+/* .center {
+    display: block;
+    margin: 1.0rem auto;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+} */
+
+.center30 {
+    margin: auto;
+    width: 30%;
+    text-align: center;
+}
+
+.center50 {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.center70 {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+}
+
+.center100 {
+    margin: auto;
+    width: 100%;
+    text-align: center;
 }
